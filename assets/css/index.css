@@ -1,0 +1,360 @@
+/*Import ---------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*Normalización*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Globales ---------------------------------------------------------------------------------------*/
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--violeta-claro2);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*Variables ---------------------------------------------------------------------------------------*/
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --violeta: #bf9dff;
+    --rosa: #ff7b97;
+    --violeta-oscuro: #2c1c49;
+    --violeta-claro: #e3d4ff;
+    --violeta-claro2: #efecff;
+    --rosa-claro: #ffd3dc;
+    --light-mode-box-shadow: -5px 5px 15px 2px #c0b5fe3d;
+}
+
+/*Estilos header ---------------------------------------------------------------------------------------*/
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+/*Logo*/
+.header h2 {
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--violeta-oscuro);
+}
+
+/*Barra buscadora*/
+.container-barra-buscadora {
+    width: 40rem;
+    height: 70%;
+    display: flex;
+    justify-content: left;
+    background: var(--violeta-claro);
+    box-shadow: var(--light-mode-box-shadow);
+    border-radius: 20rem;
+    display: flex;
+    align-items: center;
+}
+
+.container-barra-buscadora i {
+    font-size: 2em;
+    color: var(--violeta);
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.barra-buscadora {
+    width: 100%;
+    height: 100%;
+    border-radius: 20rem;
+    padding-left: 2rem;
+    border: none;
+    background-color: transparent;
+    flex: 1;
+}
+
+.barra-buscadora::placeholder {
+    color: var(--violeta);
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.barra-buscadora:focus {
+    outline: none;
+}
+
+/*Usuario*/
+.usuario {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    background-color: var(--violeta-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: var(--violeta);
+    cursor: pointer;
+    box-shadow: var(--light-mode-box-shadow);
+}
+
+/*Estilos navbar ---------------------------------------------------------------------------------------*/
+.navbar {
+    width: 15vh;
+    height: 60rem;
+    display:flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    margin: 2rem 0.5rem 0 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home,
+.ejemplos,
+.ai {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 5rem;
+    background-color: var(--violeta);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.home{
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.ejemplos{
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.ai{
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.text {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--violeta-oscuro);
+}
+
+.text1 {
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1.4s;
+}
+
+.text2 {
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.text3 {
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 1.6s;
+}
+
+
+/*Estilos hero ---------------------------------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 4rem 0 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*Descripcion*/
+.descripcion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descripcion h1 {
+    font-size: 5em;
+    color: var(--violeta-oscuro);
+    opacity: 0;
+    animation: fade-in 0.5s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.descripcion p {
+    font-size: 1.8em;
+    padding-bottom: 5rem;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/*Abstracto*/
+.abstracto {
+    width: 50%;
+    position: relative;
+}
+
+.abstracto iframe {
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+.pop {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 30rem;
+    height: 20rem;
+    padding: 0 2rem 0 2rem;
+    border-radius: 2rem;
+    background-color: #e3d4ff74;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--light-mode-box-shadow);
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 1.8em;
+    color: var(--violeta-oscuro);
+}
+
+.pop span i {
+    padding-right: 1rem;
+}
+
+.icon {
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+
+.icon2 {
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.9s;
+}
+
+.icon3 {
+    animation: fade-in 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.abstracto::before {
+    content: '';
+    position: absolute;
+    bottom: 2.7%;
+    right: 2.7%;
+    width: 14rem;
+    height: 4rem;
+    border-radius: 1rem;
+    background-color: var(--violeta-claro2);
+}
+
+/*Icono mouse-scroll*/
+.mouse-scroll {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-icon {
+    width: 3em;
+    height: 5em;
+    border: .3em solid var(--violeta-oscuro);
+    border-radius: 3em;
+    position: relative;
+}
+
+.scroll-icon.ex-1 .wheel {
+    position: absolute;
+    width: .6em;
+    height: .6em;
+    background-color: var(--violeta-oscuro);
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    border-radius: .6em;
+    animation: ex-1-wheel 1s ease-in-out infinite;
+}
+
+/*Kayframes ---------------------------------------------------------------------------------------*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ex-1-wheel {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    20%,
+    70% {
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        transform: translate(-50%, 150%);
+        opacity: 0;
+    }
+}
+
+@keyframes drawLine {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 30rem;
+    }
+}
