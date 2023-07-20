@@ -6,43 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aivory</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="assets/css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="assets/js/index.js" defer></script>
+    <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 
 <body>
-    <!--Comienzo del header-->
-    <header class="header">
-        <div class="logo">
-            <h2>Aivory</h2>
-        </div>
-        <div class="container-barra-buscadora">
-            <input class="barra-buscadora" type="text" placeholder="Brainstorming...">
-            <i class="uil uil-search"></i>
-        </div>
-        <div class="usuario">
-            <i class="uil uil-user"></i>
-        </div>
-    </header>
-    <!--Fin del header-->
-    <!--Comienzo del navbar-->
-    <nav class="navbar">
-        <div class="container">
-            <div class="home"></div>
-            <div class="text text1">Home</div>
-        </div>
-        <div class="container">
-            <div class="ejemplos"></div>
-            <div class="text text2">Ejemplos</div>
-        </div>
-        <div class="container">
-            <div class="ai"></div>
-            <div class="text text3">AI</div>
-        </div>
-    </nav>
-    <!--Fin del navbar-->
     <!--Comienzo del hero-->
-    <main class="hero" id="hero">
+    <section class="hero" id="hero">
+        <!--Comienzo del header-->
+        <header class="header" id="header">
+            <div class="logo">
+                <h2>Aivory</h2>
+            </div>
+            <div class="container-barra-buscadora">
+                <input class="barra-buscadora" type="text" placeholder="Brainstorming...">
+                <i class="uil uil-search"></i>
+            </div>
+            <div class="usuario">
+                <i class="uil uil-user"></i>
+            </div>
+        </header>
+        <!--Fin del header-->
+        <!--Comienzo del navbar-->
+        <nav class="navbar">
+            <div class="container">
+                <a href="#header" class="home"></a>
+                <div class="text text1">Home</div>
+            </div>
+            <div class="container">
+                <a href="#ejemplos" class="ejemplos"></a>
+                <div class="text text2">Ejemplos</div>
+            </div>
+            <div class="container">
+                <a href="#ai" class="ai"></a>
+                <div class="text text3">AI</div>
+            </div>
+        </nav>
+        <!--Fin del navbar-->
         <div class="descripcion">
             <h1>¿Qué son las AI? Aprende eso y a cómo usarlas a tu favor!</h1>
             <p>The industry's standard dummy text ever since the 1500s, when an
@@ -65,8 +68,171 @@
                 <span class="icon3"><i class="uil uil-bookmark"></i></i>Guarda para más tarde</span>
             </div>
         </div>
-    </main>
+    </section>
     <!--Fin del hero-->
+
+    <!--Comienzo seccion ejemplos-->
+    <section class="container-ejemplos" id="ejemplos">
+        <div class="encabezado">
+            <h2 data-aos="fade-up">
+                Herramientas AI
+            </h2>
+            <div class="etiqueta">
+                02 - ejemplos
+            </div>
+        </div>
+
+        <div class="tarjetas">
+
+            <div data-aos="fade-up" data-aos-delay="100" class="tarjeta-desarrollo tarjeta">
+                <div class="tarjeta-descripcion">
+                    <h3>Desarrollo web</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia,
+                        corporis harum? Perspiciatis.</p>
+                    <div class="botones">
+                        <div class="button">
+                            <button class="btn"><a href="#">Utilizar AI</a></button>
+                        </div>
+                        <div class="button-arrow">
+                            <i class="uil uil-arrow-right">Ver relacionados</i>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/image/DW.gif" alt="gif que muestra como utilizar una AI para desarrollo web">
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="150" class="tarjeta-diseño tarjeta">
+                <div class="tarjeta-descripcion">
+                    <h3>Diseño gráfico</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia,
+                        corporis harum? Perspiciatis.</p>
+                    <div class="botones">
+                        <div class="button">
+                            <button class="btn"><a href="#">Utilizar AI</a></button>
+                        </div>
+                        <div class="button-arrow">
+                            <i class="uil uil-arrow-right">Ver relacionados</i>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/image/DG.gif" alt="gif que muestra como utilizar una AI para diseño gráfico">
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" class="tarjeta-copy tarjeta">
+                <div class="tarjeta-descripcion">
+                    <h3>Copy</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia,
+                        corporis harum? Perspiciatis.</p>
+                    <div class="botones">
+                        <div class="button">
+                            <button class="btn"><a href="#">Utilizar AI</a></button>
+                        </div>
+                        <div class="button-arrow">
+                            <i class="uil uil-arrow-right">Ver relacionados</i>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/image/Copy.gif" alt="gif que muestra como utilizar una AI para writing">
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="250" class="tarjeta-chat tarjeta">
+                <div class="tarjeta-descripcion">
+                    <h3>Chatsonic</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia,
+                        corporis harum? Perspiciatis.</p>
+                    <div class="botones">
+                        <div class="button">
+                            <button class="btn"><a href="#">Utilizar AI</a></button>
+                        </div>
+                        <div class="button-arrow">
+                            <i class="uil uil-arrow-right">Ver relacionados</i>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/image/Chatbot.gif" alt="gif que muestra como utilizar una AI para imagen y sonido">
+            </div>
+        </div>
+
+    </section>
+    <!--Fin de seccion ejemplos-->
+
+    <!--Comienzo seccion AI-->
+    <section class="section-ai" id="ai">
+
+        <div class="mascota">
+            <iframe src='https://my.spline.design/cat02copy-ecde853a2e61b412b6270e99ec5cab32/' frameborder='0'
+                width='100%' height='100%'></iframe>
+        </div>
+
+        <div class="dialogos">
+            
+            <!--dialogos iniciales-->
+            <div class="container-dialogos-principales">
+                <div class="dialogo1">
+                    ¡Hola, mi nombre es Moe! Estoy aquí para ayudarte a escoger tu AI
+                </div>
+                <div class="dialogo2">
+                    <strong>Tú:</strong> Hola Moe, necesito una AI para...
+                </div>
+            </div>
+        
+            <!--dialogos derivados de las decisiones-->
+            <!--trabajo-->
+            <div class="container-dialogos-secundarios display-none">
+                <div class="dialogo3">
+                    Ya veo, voy a mostrarte algunas AI muy útiles para el trabajo...
+                </div>
+                <div class="dialogo4">
+                    <strong>Tú:</strong> Para que me ayude en mi trabajo.
+                </div>
+            </div>
+
+            <!--ocio-->
+            <div class="container-dialogos-secundarios-2 display-none">
+                <div class="dialogo5">
+                    ¡Qué bueno! Las AI también pueden ser muy divertidas, te mostraré algunas...
+                </div>
+                <div class="dialogo6">
+                    <strong>Tú:</strong> Para entretenerme y pasar el rato.
+                </div>
+            </div>
+
+            <!--curiosidad-->
+            <div class="container-dialogos-secundarios-3 display-none">
+                <div class="dialogo7">
+                    Aahh quieres explorar. Te mostraré un poco de todo...
+                </div>
+                <div class="dialogo8">
+                    <strong>Tú:</strong> Para investigar que es lo que pueden hacer las AI.
+                </div>
+            </div>
+
+            <!--decisiones-->
+            <div class="decisiones">
+                <span>Elige una opción</span>
+                <div class="container-decisiones">
+                    <div class="trabajo">
+                       <a href="#">Trabajo</a>
+                    </div>
+                    <div class="ocio">
+                        <a href="#">Ocio</a>
+                    </div>
+                    <div class="curiosidad">
+                        <a href="#">Curiosidad</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--Fin de seccion AI-->
+    <!--libreria AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--end of libreria AOS-->
 </body>
 
 </html>
