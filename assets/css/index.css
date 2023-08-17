@@ -535,6 +535,12 @@ ul {
     padding-bottom: 22rem;
 }
 
+.ver-trabajos {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
 .dialogo3,
 .dialogo4,
 .dialogo5,
