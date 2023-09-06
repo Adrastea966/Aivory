@@ -32,13 +32,40 @@
                 <i class="uil uil-search"></i>
             </div>
 
-            <div class="usuario">
+            <div class="usuario" id="user">
                 <i class="uil uil-user"></i>
             </div>
 
         </header>
         <!--Fin del header-->
-        
+
+        <!--Layout loggin-->
+        <div id="overlay" class="overlay">
+            <div id="layout-content" class="layout-content">
+                <h2>Bienvenido a Aivory!</h2>
+                <i class="uil uil-times" id="close"></i>
+
+                <div class="form">
+                    <input name="name" required type="text" id="name" placeholder="Usuario">
+                    <input name="name" required type="password" id="pass" placeholder="Contraseña">
+                    <button id="iniciar-sesion">Iniciar sesión</button>
+                </div>
+
+                <!-- Formulario de registro (inicialmente oculto) -->
+                <div class="form-registro" style="display:none;">
+                    <label for="name" class="label-registro-1">Crea tu nombre de usuario</label>
+                    <input name="name" required type="text" class="input-registro-1" id="name-registro" placeholder="Nombre usuario">
+                    <label for="name" class="label-registro-2">Crea tu contraseña</label>
+                    <input name="name" required type="password" class="input-registro-2" id="pass-registro" placeholder="Contraseña">
+                    <button id="registro-usuario">Registrarme</button>
+                </div>
+
+                <p class="registro">¿No tienes cuenta?<a class="registro-link" href="#">Regístrate</a></p>
+            </div>
+        </div>
+        <!--Fin layout loggin-->
+
+
         <!--Comienzo del navbar-->
         <nav class="navbar">
             <div class="container">
@@ -178,7 +205,7 @@
         </div>
 
         <div class="dialogos">
-            
+
             <!--dialogos iniciales-->
             <div class="container-dialogos-principales">
                 <div class="dialogo1">
@@ -188,7 +215,7 @@
                     <strong>Tú:</strong> Hola Moe, necesito una AI para...
                 </div>
             </div>
-        
+
             <!--dialogos derivados de las decisiones-->
 
             <!--trabajo-->
@@ -227,7 +254,7 @@
                 <span>Elige una opción</span>
                 <div class="container-decisiones">
                     <div class="trabajo">
-                       <a href="#">Trabajo</a>
+                        <a href="#">Trabajo</a>
                     </div>
                     <div class="ocio">
                         <a href="#">Ocio</a>

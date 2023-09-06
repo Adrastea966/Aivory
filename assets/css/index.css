@@ -116,6 +116,122 @@ ul {
     box-shadow: var(--light-mode-box-shadow);
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.layout-content {
+    position: absolute;
+    width: 80rem;
+    height: 60rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.layout-content h2 {
+    font-size: 2.5em;
+    color: var(--violeta-oscuro);
+}
+
+.layout-content i {
+    font-size: 2.5em;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.form,
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.form-registro label {
+    font-size: 1.5em;
+}
+
+.form-registro .label-registro-1 {
+    position: absolute;
+    top:42%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+
+.form-registro .label-registro-2 {
+    position: absolute;
+    top:58%;
+    left: 34%;
+    transform: translate(-50%,-50%);
+}
+
+.form-registro .input-registro-1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form-registro .input-registro-2{
+    position: absolute;
+    top:65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form-registro button{
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form input,
+.form-registro input {
+    padding: 1rem;
+    width: 40rem;
+    font-size: 1.8em;
+}
+
+.form button,
+.form-registro button {
+    width: 20rem;
+    padding: 0.8rem;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.registro {
+    font-size: 1.5em;
+}
+
+.registro a {
+    padding-left: 1rem;
+    color: var(--violeta)
+}
+
 /*Estilos navbar ---------------------------------------------------------------------------------------*/
 .navbar {
     width: 15vh;
@@ -370,7 +486,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:2rem;
+    gap: 2rem;
 }
 
 .tarjeta {
@@ -447,10 +563,10 @@ ul {
 }
 
 /*Seccion AI ---------------------------------------------------------------------------------------*/
-.section-ai{
+.section-ai {
     width: 100%;
     min-height: 100vh;
-    display:flex;
+    display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
@@ -459,22 +575,22 @@ ul {
 }
 
 /*Mascota*/
-.mascota{
+.mascota {
     width: 30%;
     height: 70vh;
 }
 
 /*Dialogos*/
-.dialogos{
+.dialogos {
     width: 30%;
     height: 100%;
     padding-left: 5rem;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.container-dialogos-principales{
-    display:flex;
+.container-dialogos-principales {
+    display: flex;
     flex-direction: column;
     gap: 2rem;
 }
@@ -494,20 +610,20 @@ ul {
     box-shadow: var(--light-mode-box-shadow);
 }
 
-.dialogo1{
+.dialogo1 {
     animation: fade-in 0.5s ease forwards;
     opacity: 0;
     animation-delay: 0.5s;
 }
 
-.dialogo2{
+.dialogo2 {
     background-color: var(--violeta-claro);
     animation: fade-in 0.5s ease forwards;
     opacity: 0;
     animation-delay: 1.7s;
 }
 
-.dialogo1::before{
+.dialogo1::before {
     content: "";
     position: absolute;
     top: 20%;
@@ -516,7 +632,7 @@ ul {
     border-top: 3rem solid transparent;
 }
 
-.dialogo2::before{
+.dialogo2::before {
     content: "";
     position: absolute;
     top: 20%;
@@ -528,8 +644,8 @@ ul {
 /*bloque secundario*/
 .container-dialogos-secundarios,
 .container-dialogos-secundarios-2,
-.container-dialogos-secundarios-3{
-    display:flex;
+.container-dialogos-secundarios-3 {
+    display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
     padding-bottom: 22rem;
@@ -546,7 +662,7 @@ ul {
 .dialogo5,
 .dialogo6,
 .dialogo7,
-.dialogo8{
+.dialogo8 {
     width: 45rem;
     height: 9rem;
     border-radius: 2rem;
@@ -562,7 +678,7 @@ ul {
 
 .dialogo4,
 .dialogo6,
-.dialogo8{
+.dialogo8 {
     animation: fade-in 0.5s ease forwards;
     opacity: 0;
     animation-delay: 0.5s;
@@ -570,7 +686,7 @@ ul {
 
 .dialogo3,
 .dialogo5,
-.dialogo7{
+.dialogo7 {
     background-color: var(--rosa-claro);
     animation: fade-in 0.5s ease forwards;
     opacity: 0;
@@ -579,7 +695,7 @@ ul {
 
 .dialogo4::before,
 .dialogo6::before,
-.dialogo8::before{
+.dialogo8::before {
     content: "";
     position: absolute;
     top: 20%;
@@ -591,7 +707,7 @@ ul {
 
 .dialogo3::before,
 .dialogo5::before,
-.dialogo7::before{
+.dialogo7::before {
     content: "";
     position: absolute;
     top: 20%;
@@ -601,8 +717,8 @@ ul {
 }
 
 /*Decisiones*/
-.decisiones{
-    display:flex;
+.decisiones {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -614,8 +730,8 @@ ul {
     animation-delay: 2.5s;
 }
 
-.container-decisiones{
-    display:flex;
+.container-decisiones {
+    display: flex;
     flex-direction: row;
     gap: 2rem;
     cursor: pointer;
@@ -623,13 +739,13 @@ ul {
 
 .ocio,
 .trabajo,
-.curiosidad{
+.curiosidad {
     width: 10rem;
     height: 5rem;
     border-radius: 1rem;
     background-color: var(--violeta-claro);
     border: 1.5px solid var(--violeta);
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in-out;
@@ -637,7 +753,7 @@ ul {
 
 .ocio:hover,
 .trabajo:hover,
-.curiosidad:hover{
+.curiosidad:hover {
     transform: scale(1.1);
     background-color: var(--violeta);
 }
@@ -647,7 +763,9 @@ ul {
 }
 
 /*Kayframes ---------------------------------------------------------------------------------------*/
-@keyframes fade-in {    /*animacion texto*/
+@keyframes fade-in {
+
+    /*animacion texto*/
     0% {
         opacity: 0;
         transform: translateY(10px);
@@ -659,7 +777,9 @@ ul {
     }
 }
 
-@keyframes ex-1-wheel {  /*animacion mouse*/
+@keyframes ex-1-wheel {
+
+    /*animacion mouse*/
     0% {
         transform: translate(-50%, 0);
         opacity: 0;
@@ -677,7 +797,9 @@ ul {
     }
 }
 
-@keyframes drawLine {  /*animacion fondo*/
+@keyframes drawLine {
+
+    /*animacion fondo*/
     0% {
         height: 0;
     }
@@ -687,7 +809,9 @@ ul {
     }
 }
 
-@keyframes fade-in-opacity { /*animacion texto*/
+@keyframes fade-in-opacity {
+
+    /*animacion texto*/
     from {
         opacity: 0;
     }
